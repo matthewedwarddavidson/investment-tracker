@@ -1,0 +1,8 @@
+{:server {:port #profile {:dev 3000
+                         :prod #long #or [#env PORT "3000"]}}
+
+ :db     {:jdbc-url #profile {:dev  "jdbc:sqlite:investment-tracker-dev.db"
+                              :test "jdbc:sqlite::memory:"
+                              :prod "jdbc:sqlite:investment-tracker.db"}}
+
+ :app    {:name "investment-tracker"}}
